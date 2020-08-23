@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  lgtm:
+  - apiVersion: v1
+    appVersion: 0.1.0
+    created: "2020-08-23T11:12:40.743080277Z"
+    description: A GitLab MR dashboard
+    digest: 694704f5cfea28ade2278bbc26c9cf2749784632c6dc444c45ecaad3c99043fa
+    home: https://github.com/cmacrae/lgtm
+    icon: https://raw.githubusercontent.com/cmacrae/lgtm/master/templates/favicon-32x32.png
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+    name: lgtm
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/lgtm-0.1.0/lgtm-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-08-23T11:12:40.654842511Z"
