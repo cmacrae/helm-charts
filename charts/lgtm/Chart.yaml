@@ -1,0 +1,10 @@
+apiVersion: v1
+name: lgtm
+description: A GitLab MR dashboard
+home: https://github.com/cmacrae/lgtm
+version: 0.1.0
+appVersion: 0.1.0
+icon: https://raw.githubusercontent.com/cmacrae/lgtm/master/templates/favicon-32x32.png
+maintainers:
+  - name: cmacrae
+    email: hi@cmacr.ae
