@@ -1,0 +1,9 @@
+apiVersion: v1
+name: d2-prometheus-exporter
+description: A Prometheus exporter for Destiny 2 metrics
+home: https://github.com/cmacrae/d2-prometheus-exporter
+version: 0.1.0
+appVersion: 0.1.0
+maintainers:
+  - name: cmacrae
+    email: hi@cmacr.ae

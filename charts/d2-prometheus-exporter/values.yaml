@@ -1,0 +1,33 @@
+replicaCount: 1
+
+image:
+  repository: cmacrae/d2-prometheus-exporter
+  tag: ""
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: d2-prometheus-exporter-example.local
+      paths: []
+  tls: []
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+player:
+  platform: "stadia"
+  name: "example"
+bnet_apikey_secret:
+  name: d2-prometheus-exporter
+  key: api-key
