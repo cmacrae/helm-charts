@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  d2-prometheus-exporter:
+  - apiVersion: v1
+    appVersion: 0.1.0
+    created: "2020-08-23T17:22:30.896722408Z"
+    description: A Prometheus exporter for Destiny 2 metrics
+    digest: 11042d3bc56f871c310e46c367e61e13f2beb178f9f97f1767438dd0dffdb9ea
+    home: https://github.com/cmacrae/d2-prometheus-exporter
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+    name: d2-prometheus-exporter
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/d2-prometheus-exporter-0.1.0/d2-prometheus-exporter-0.1.0.tgz
+    version: 0.1.0
   lgtm:
   - apiVersion: v1
     appVersion: 0.1.0
