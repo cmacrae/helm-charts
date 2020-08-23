@@ -1,0 +1,28 @@
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'charts/**'
+      - '.github/**'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Fetch history
+        run: git fetch --prune --unshallow
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@master
+        env:
+          CR_TOKEN: '${{ secrets.CR_TOKEN }}'
+        with:
+          charts_repo_url: https://charts.cmacr.ae

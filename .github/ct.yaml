@@ -1,0 +1,5 @@
+helm-extra-args: --timeout 5m
+check-version-increment: true
+debug: true
+namespace: default
+release-label: testing
