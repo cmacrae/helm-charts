@@ -1,0 +1,35 @@
+replicaCount: 1
+
+image:
+  repository: cmacrae/kube-opa-violation-exporter
+  tag: ""
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: kube-opa-violation-exporter-example.local
+      paths: []
+  tls: []
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+prometheusOperator:
+  enabled: false
+  serviceMonitor:
+    interval: 10s
+    namespace: monitoring
+    selector:
+      prometheus: kube-prometheus

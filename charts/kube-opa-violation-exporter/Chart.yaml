@@ -1,0 +1,11 @@
+apiVersion: v1
+name: kube-opa-violation-exporter
+description: >-
+  Watch your in cluster k8s manifests for OPA policy violations
+  and export them as Prometheus metrics
+home: https://github.com/cmacrae/kube-opa-violation-exporter
+version: 0.1.0
+appVersion: 0.1.0
+maintainers:
+  - name: cmacrae
+    email: hi@cmacr.ae
