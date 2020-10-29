@@ -35,6 +35,7 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "kube-opa-violation-exporter.labels" -}}
+app: {{ include "kube-opa-violation-exporter.name" . }}
 helm.sh/chart: {{ include "kube-opa-violation-exporter.chart" . }}
 {{ include "kube-opa-violation-exporter.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
