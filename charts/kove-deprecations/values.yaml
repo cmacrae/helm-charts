@@ -1,0 +1,14 @@
+# -- Namespace to deploy to
+namespace: default
+
+# -- File glob pattern used to match paths to policies. This can be used to exclude any of the included policies that you don't want to evaluate.
+policyGlob: "policies/**"
+
+# -- Values to pass to the 'kove' dependancy Chart. Generally speaking, this should be left as is.
+kove:
+  fullnameOverride: kove-deprecations
+  policyConfigMap: kove-deprecations-policies
+  config:
+    ignoreChildren: true
+    policies:
+      - /policies

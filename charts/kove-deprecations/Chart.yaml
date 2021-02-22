@@ -1,0 +1,16 @@
+apiVersion: v2
+name: kove-deprecations
+description: Prometheus metrics for Kubernetes API deprecations, using github.com/cmacrae/kove
+maintainers:
+  - name: cmacrae
+    email: hi@cmacr.ae
+    url: https://cmacr.ae
+
+type: application
+version: 0.1.0
+appVersion: 0.1.0
+
+dependencies:
+  - name: kove
+    version: ~0.1.0
+    repository: "https://charts.cmacr.ae"
