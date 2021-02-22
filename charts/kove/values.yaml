@@ -1,0 +1,89 @@
+# -- Namespace to deploy to
+namespace: default
+
+# -- Number of replicas for the deployment
+replicaCount: 1
+
+image:
+  # -- Container image to use for the deployment
+  repository: ghcr.io/cmacrae/kove
+  # -- Container image tag. If empty, defaults to `.Chart.AppVersion`
+  tag: ""
+  # -- Container image pull policy
+  pullPolicy: IfNotPresent
+
+# -- If authentication is required for pulling the image from the registry, it can be provided here
+imagePullSecrets: []
+
+# -- Overrides the short name for resources created by this chart
+nameOverride: ""
+
+# -- Overrides the full name for resources created by this chart
+fullnameOverride: ""
+
+service:
+  # -- Configures the Service type
+  type: ClusterIP
+  # -- Configures the Service port
+  port: 3000
+
+ingress:
+
+  # -- Whether to create an Ingress object
+  enabled: false
+
+  # -- Annotations for the Ingress
+  annotations: {}
+
+  # -- Host entries for the Ingress
+  hosts: []
+
+  # -- TLS configuration for the Ingress
+  tls: []
+
+# -- Configuration for the Deployment resources
+resources: {}
+
+# -- NodeSelector configuration for the Deployment
+nodeSelector: {}
+
+# -- Toleration configuration for the Deployment
+tolerations: []
+
+# -- Affinity configuration for the Deployment
+affinity: {}
+
+# -- ServiceAccount to use for the Deployment. If none is set, one will be created
+serviceAccount: ""  
+
+# -- ClusterRole to bind the ServiceAccount to use for the Deployment. If none is set, 'view' will be used
+clusterRole: ""
+
+# -- Configures a Prometheus Operator ServiceMonitor object
+prometheusOperator:
+  enabled: false
+  serviceMonitor:
+    interval: 10s
+    namespace: monitoring
+    selector:
+      prometheus: kube-prometheus
+
+# -- Application configuration. See [the project README](https://github.com/cmacrae/kove/tree/master#config) for more info
+config: |
+  ignoreChildren: true
+  objects:
+    - group: apps
+      version: v1
+      resource: deployments
+    - group: apps
+      version: v1
+      resource: daemonsets
+    - group: apps
+      version: v1
+      resource: statefulsets
+  
+# -- Rego policy to evaluate objects against. See [the project README](https://github.com/cmacrae/kove/tree/master#policy) for more info
+policy: ""
+
+# -- Override the ConfigMap containing the Rego policies
+policyConfigMap: ""

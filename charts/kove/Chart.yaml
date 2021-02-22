@@ -1,0 +1,12 @@
+apiVersion: v1
+name: kove
+description: >-
+  Watch your in cluster Kubernetes manifests for OPA policy violations
+  and export them as Prometheus metrics
+home: https://github.com/cmacrae/kove
+version: 0.1.0
+appVersion: 0.1.0
+maintainers:
+  - name: cmacrae
+    email: hi@cmacr.ae
+    url: https://cmacr.ae

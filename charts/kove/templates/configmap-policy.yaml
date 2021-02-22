@@ -1,0 +1,12 @@
+{{- if empty .Values.policyConfigMap -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "kove.fullname" . }}-policy
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "kove.labels" . | nindent 4 }}
+data:
+  policy: |
+    {{ .Values.policy | nindent 4}}
+{{- end }}

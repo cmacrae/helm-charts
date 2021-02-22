@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "kove.fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "kove.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "kove.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "kove.selectorLabels" . | nindent 8 }}
+    spec:
+    {{- if not .Values.serviceAccount }}
+      serviceAccountName: {{ include "kove.fullname" . }}
+    {{- else }}
+      serviceAccountName: {{ .Values.serviceAccount }}
+    {{- end }}
+      automountServiceAccountToken: true
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          {{- if empty .Values.image.tag }}
+          image: "{{ .Values.image.repository }}:v{{ .Chart.AppVersion }}"
+          {{- else }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          {{- end }}
+          args: [ "-config", "/config/config.yaml" ]
+          volumeMounts:
+          - name: config
+            mountPath: "/config"
+            readOnly: true
+          - name: policies
+            mountPath: "/policies"
+            readOnly: true
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: config
+          configMap:
+            name: {{ include "kove.fullname" . }}-config
+        - name: policies
+          configMap:
+            {{- if empty .Values.policyConfigMap -}}
+            name: {{ include "kove.fullname" . }}-policy
+            {{- else }}
+            name: {{ .Values.policyConfigMap }}
+            {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
