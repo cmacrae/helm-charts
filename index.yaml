@@ -14,6 +14,22 @@ entries:
     urls:
     - https://github.com/cmacrae/helm-charts/releases/download/d2-prometheus-exporter-0.1.0/d2-prometheus-exporter-0.1.0.tgz
     version: 0.1.0
+  kove:
+  - apiVersion: v1
+    appVersion: 0.1.0
+    created: "2021-02-22T18:01:45.895996267Z"
+    description: Watch your in cluster Kubernetes manifests for OPA policy violations
+      and export them as Prometheus metrics
+    digest: e38953252c5c3889a316191b125380b5d6f702dcd92f495412e6f766c11c978a
+    home: https://github.com/cmacrae/kove
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+      url: https://cmacr.ae
+    name: kove
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/kove-0.1.0/kove-0.1.0.tgz
+    version: 0.1.0
   kube-opa-violation-exporter:
   - apiVersion: v1
     appVersion: 0.1.0
