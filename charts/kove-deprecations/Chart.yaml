@@ -10,7 +10,7 @@ type: application
 version: 0.1.0
 appVersion: 0.1.0
 
-dependencies:
-  - name: kove
-    version: ~0.1.0
-    repository: "https://charts.cmacr.ae"
+# dependencies:
+#   - name: kove
+#     version: ~0.1.0
+#     repository: "https://charts.cmacr.ae"
