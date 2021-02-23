@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/logo.png" alt="kove logo">
-</p>
+![kove logo](https://raw.githubusercontent.com/cmacrae/kove/master/assets/logo.png)
 <p align="center">
   <a href="https://github.com/cmacrae/kove/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/cmacrae/kove.svg?color=a6dcef" alt="License Badge">
