@@ -44,6 +44,25 @@ entries:
     urls:
     - https://github.com/cmacrae/helm-charts/releases/download/kube-opa-violation-exporter-0.1.0/kube-opa-violation-exporter-0.1.0.tgz
     version: 0.1.0
+  kove-deprecations:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-02-23T08:56:53.459480803Z"
+    dependencies:
+    - name: kove
+      repository: https://charts.cmacr.ae
+      version: ~0.1.0
+    description: Prometheus metrics for Kubernetes API deprecations, using github.com/cmacrae/kove
+    digest: c54ef0351227959a39046bcbef2169554126b3fa6e13eb10a60a9546754a794c
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+      url: https://cmacr.ae
+    name: kove-deprecations
+    type: application
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/kove-deprecations-0.1.0/kove-deprecations-0.1.0.tgz
+    version: 0.1.0
   lgtm:
   - apiVersion: v1
     appVersion: 0.1.0
