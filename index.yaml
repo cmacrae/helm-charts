@@ -50,6 +50,46 @@ entries:
     urls:
     - https://github.com/cmacrae/helm-charts/releases/download/kove-0.1.0/kove-0.1.0.tgz
     version: 0.1.0
+  kove-deprecations:
+  - annotations:
+      artifacthub.io/changes: |
+        - Initial release!
+      artifacthub.io/images: |
+        - name: kove
+          image: ghcr.io/cmacrae/kove:v0.1.0
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/cmacrae/kove
+    apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-02-23T20:33:59.927485119Z"
+    dependencies:
+    - name: kove
+      repository: https://charts.cmacr.ae
+      version: ~0.1.0
+    description: Prometheus metrics for Kubernetes API & schema deprecations, using
+      github.com/cmacrae/kove
+    digest: 46d6b9c905d6c3fc15e9e1d26d9d34daa2817720c8059e22127adfd3f051eeff
+    home: https://github.com/cmacrae/kove
+    keywords:
+    - monitoring
+    - metrics
+    - prometheus
+    - exporter
+    - prometheus-exporter
+    - opa
+    - open-policy-agent
+    - rego
+    - observability
+    - deprecations
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+      url: https://cmacr.ae
+    name: kove-deprecations
+    type: application
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/kove-deprecations-0.1.0/kove-deprecations-0.1.0.tgz
+    version: 0.1.0
   lgtm:
   - apiVersion: v1
     appVersion: 0.1.0
