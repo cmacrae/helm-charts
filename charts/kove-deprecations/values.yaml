@@ -1,10 +1,10 @@
 # -- Namespace to deploy to
 namespace: default
 
-# -- File glob pattern used to match paths to policies. This can be used to exclude any of the included policies that you don't want to evaluate.
+# -- [File glob](https://helm.sh/docs/chart_template_guide/accessing_files/#glob-patterns) pattern used to match paths to policies. This can be used to exclude any of the included policies that you don't want to evaluate. Pattern syntax can be found [here](https://pkg.go.dev/github.com/gobwas/glob#Compile).
 policyGlob: "policies/**"
 
-# -- Values to pass to the 'kove' dependancy Chart. Generally speaking, this should be left as is.
+# -- Values to pass to the 'kove' dependancy Chart.
 kove:
   fullnameOverride: kove-deprecations
   policyConfigMap: kove-deprecations-policies
