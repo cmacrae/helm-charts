@@ -14,6 +14,8 @@ spec:
     metadata:
       labels:
         {{- include "kove.selectorLabels" . | nindent 8 }}
+      annotations:
+        {{-  toYaml .Values.deployment.annotations | nindent 8 }}
     spec:
     {{- if not .Values.serviceAccount }}
       serviceAccountName: {{ include "kove.fullname" . }}
@@ -66,7 +68,7 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-    {{- with .Values.affinity }}
+    {{- with .Values.deployment.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
     {{- end }}
