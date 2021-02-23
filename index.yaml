@@ -14,6 +14,57 @@ entries:
     urls:
     - https://github.com/cmacrae/helm-charts/releases/download/d2-prometheus-exporter-0.1.0/d2-prometheus-exporter-0.1.0.tgz
     version: 0.1.0
+  kove:
+  - annotations:
+      artifacthub.io/changes: |
+        - Initial release!
+      artifacthub.io/images: |
+        - name: kove
+          image: ghcr.io/cmacrae/kove:v0.1.0
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/cmacrae/kove-deprecations
+    apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-02-23T15:39:54.830843725Z"
+    description: Watch your in cluster Kubernetes manifests for OPA policy violations
+      and export them as Prometheus metrics
+    digest: 27b7ce8f07b20b42b898c323d81757d8ac1a736cd537bfc9187324c207bf81b0
+    home: https://github.com/cmacrae/kove
+    icon: https://raw.githubusercontent.com/cmacrae/kove/master/assets/icon.png
+    keywords:
+    - monitoring
+    - metrics
+    - prometheus
+    - exporter
+    - prometheus-exporter
+    - opa
+    - open-policy-agent
+    - rego
+    - observability
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+      url: https://cmacr.ae
+    name: kove
+    type: application
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/kove-0.1.0/kove-0.1.0.tgz
+    version: 0.1.0
+  kove-deprecations:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-02-23T15:39:54.924660692Z"
+    description: Prometheus metrics for Kubernetes API deprecations, using github.com/cmacrae/kove
+    digest: 3e02260bd7118fb07941fcf63f65c1fa4d234b28569783d0caf3c8d3bc778a35
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+      url: https://cmacr.ae
+    name: kove-deprecations
+    type: application
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/kove-deprecations-0.1.0/kove-deprecations-0.1.0.tgz
+    version: 0.1.0
   lgtm:
   - apiVersion: v1
     appVersion: 0.1.0
