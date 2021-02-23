@@ -1,4 +1,4 @@
-package deprek8ion
+package kove.deprecations
 
 # Based on https://github.com/kubernetes/kubernetes/issues/82021
 

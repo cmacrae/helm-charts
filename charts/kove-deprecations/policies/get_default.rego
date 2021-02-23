@@ -1,4 +1,4 @@
-package deprek8ion
+package kove.deprecations
 
 get_default(val, key, _) = val[key]
 

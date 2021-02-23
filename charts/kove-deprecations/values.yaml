@@ -10,5 +10,6 @@ kove:
   policyConfigMap: kove-deprecations-policies
   config:
     ignoreChildren: true
+    regoQuery: data[_].deprecations.main
     policies:
       - /policies

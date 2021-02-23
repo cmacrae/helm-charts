@@ -1,4 +1,4 @@
-package deprek8ion
+package kove.deprecations
 
 # Based on https://github.com/jetstack/cert-manager/releases/tag/v0.11.0
 main[return] {

@@ -1,4 +1,4 @@
-package deprek8ion
+package kove.deprecations
 
 # Based on https://github.com/kubernetes/kubernetes/issues/47198
 # Warn about the deprecated serviceAccount field in podSpec.
