@@ -47,10 +47,28 @@ spec:
             - name: http
               containerPort: 3000
               protocol: TCP
+          {{- if .Values.deployment.livenessProbe.enabled }}
           livenessProbe:
             httpGet:
-              path: /healthz
+              path: {{ .Values.deployment.livenessProbe.path | quote }}
               port: http
+            failureThreshold: {{ .Values.deployment.livenessProbe.failureThreshold }}
+            initialDelaySeconds: {{ .Values.deployment.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.deployment.livenessProbe.periodSeconds }}
+            successThreshold: {{ .Values.deployment.livenessProbe.successThreshold }}
+            timeoutSeconds: {{ .Values.deployment.livenessProbe.timeoutSeconds }}
+          {{- end }}
+          {{- if .Values.deployment.readinessProbe.enabled }}
+          readinessProbe:
+            httpGet:
+              path: {{ .Values.deployment.readinessProbe.path | quote }}
+              port: http
+            failureThreshold: {{ .Values.deployment.readinessProbe.failureThreshold }}
+            initialDelaySeconds: {{ .Values.deployment.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.deployment.readinessProbe.periodSeconds }}
+            successThreshold: {{ .Values.deployment.readinessProbe.successThreshold }}
+            timeoutSeconds: {{ .Values.deployment.readinessProbe.timeoutSeconds }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:

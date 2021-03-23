@@ -37,6 +37,20 @@ deployment:
     prometheus.io/port: '3000'
     prometheus.io/path: '/metrics'
 
+  # -- Liveness probe configuration for the Deployment
+  livenessProbe:
+    enabled: true
+    path: '/healthz'
+    failureThreshold: 3
+    initialDelaySeconds: 0
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+
+  # -- Readiness probe configuration for the Deployment
+  readinessProbe:
+    enabled: false
+
 ingress:
 
   # -- Whether to create an Ingress object
