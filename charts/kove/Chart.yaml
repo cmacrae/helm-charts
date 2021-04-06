@@ -24,7 +24,7 @@ keywords:
   - observability
 annotations:
   artifacthub.io/changes: |
-    - Initial release!
+    - Add probe configuration options
   artifacthub.io/images: |
     - name: kove
       image: ghcr.io/cmacrae/kove:v0.1.0
