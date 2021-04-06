@@ -2,7 +2,7 @@ apiVersion: v2
 name: kove-deprecations
 description: Prometheus metrics for Kubernetes API & schema deprecations, using github.com/cmacrae/kove
 home: https://github.com/cmacrae/kove
-version: 0.1.0
+version: 0.1.1
 appVersion: 0.1.0
 maintainers:
   - name: cmacrae
@@ -23,12 +23,12 @@ keywords:
 
 dependencies:
   - name: kove
-    version: ~0.1.0
+    version: ~0.1.1
     repository: "https://charts.cmacr.ae"
 
 annotations:
   artifacthub.io/changes: |
-    - Initial release!
+    - Update kove dependency chart to 0.1.1
   artifacthub.io/images: |
     - name: kove
       image: ghcr.io/cmacrae/kove:v0.1.0
