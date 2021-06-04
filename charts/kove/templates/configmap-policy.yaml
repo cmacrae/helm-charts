@@ -7,6 +7,6 @@ metadata:
   labels:
     {{- include "kove.labels" . | nindent 4 }}
 data:
-  policy: |
-    {{ .Values.policy | nindent 4}}
+  policy.rego: |
+    {{- .Values.policy | nindent 4}}
 {{- end }}
