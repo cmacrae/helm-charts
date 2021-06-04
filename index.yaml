@@ -17,6 +17,41 @@ entries:
   kove:
   - annotations:
       artifacthub.io/changes: |
+        - Fix policy ConfigMap key & resulting filename
+      artifacthub.io/images: |
+        - name: kove
+          image: ghcr.io/cmacrae/kove:v0.1.0
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/cmacrae/kove-deprecations
+    apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-06-04T14:25:19.311285786Z"
+    description: Watch your in cluster Kubernetes manifests for OPA policy violations
+      and export them as Prometheus metrics
+    digest: 83969a0235a0c94d39edb9baf9252b9c860b49af7635d44b37daf1c1154c9049
+    home: https://github.com/cmacrae/kove
+    icon: https://raw.githubusercontent.com/cmacrae/kove/master/assets/icon.png
+    keywords:
+    - monitoring
+    - metrics
+    - prometheus
+    - exporter
+    - prometheus-exporter
+    - opa
+    - open-policy-agent
+    - rego
+    - observability
+    maintainers:
+    - email: hi@cmacr.ae
+      name: cmacrae
+      url: https://cmacr.ae
+    name: kove
+    type: application
+    urls:
+    - https://github.com/cmacrae/helm-charts/releases/download/kove-0.1.3/kove-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/changes: |
         - Fix policy ConfigMap line return for deployment
       artifacthub.io/images: |
         - name: kove
