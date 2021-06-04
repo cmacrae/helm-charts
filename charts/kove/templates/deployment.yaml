@@ -77,7 +77,7 @@ spec:
             name: {{ include "kove.fullname" . }}-config
         - name: policies
           configMap:
-            {{- if empty .Values.policyConfigMap -}}
+            {{- if empty .Values.policyConfigMap }}
             name: {{ include "kove.fullname" . }}-policy
             {{- else }}
             name: {{ .Values.policyConfigMap }}
