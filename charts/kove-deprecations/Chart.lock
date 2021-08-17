@@ -1,6 +1,6 @@
 dependencies:
 - name: kove
   repository: https://charts.cmacr.ae
-  version: 0.1.1
-digest: sha256:db997e8406a09f3ff562503332c6937afaad5cf09d31c92446624f7a12e61447
-generated: "2021-04-06T15:52:48.141861+01:00"
+  version: 0.1.3
+digest: sha256:d5a4ec34f4f01224db4faeebb04fe04e9d967d9728b879c1835e43d5c0d2c15e
+generated: "2021-08-17T14:45:26.39058+01:00"
