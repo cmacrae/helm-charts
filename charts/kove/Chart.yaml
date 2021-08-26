@@ -5,8 +5,8 @@ description: >-
   and export them as Prometheus metrics
 home: https://github.com/cmacrae/kove
 icon: https://raw.githubusercontent.com/cmacrae/kove/master/assets/icon.png
-version: 0.1.3
-appVersion: 0.1.0
+version: 0.2.0
+appVersion: 0.2.0
 maintainers:
   - name: cmacrae
     email: hi@cmacr.ae
@@ -24,9 +24,9 @@ keywords:
   - observability
 annotations:
   artifacthub.io/changes: |
-    - Fix policy ConfigMap key & resulting filename
+    - Update kove to 0.2.0
   artifacthub.io/images: |
     - name: kove
-      image: ghcr.io/cmacrae/kove:v0.1.0
+      image: ghcr.io/cmacrae/kove:v0.2.0
   artifacthub.io/recommendations: |
     - url: https://artifacthub.io/packages/helm/cmacrae/kove-deprecations
